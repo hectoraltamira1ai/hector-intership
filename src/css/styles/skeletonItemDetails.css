@@ -1,0 +1,42 @@
+.skeleton-box {
+    background-color: #e0e0e0;
+    margin-bottom: 16px;
+    animation: shimmer 1.5s infinite linear;
+    background: linear-gradient(to right, #e0e0e0 8%, #f0f0f0 18%, #e0e0e0 33%);
+    background-size: 1000px 100%;
+}
+
+.skeleton-item-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px; 
+    margin: 20px 0; 
+}
+
+.skeleton-item-info {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 16px;
+    height: 630px;
+    width: 630px;
+    border-radius: 8px;
+    background-color: #e0e0e0;
+}
+
+.skeleton-d-flex {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}

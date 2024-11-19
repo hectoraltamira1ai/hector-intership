@@ -1,0 +1,74 @@
+.skeleton-box {
+    background-color: #e0e0e0;
+    margin-bottom: 16px;
+    animation: shimmer 1.5s infinite linear;
+    background: linear-gradient(to right, #e0e0e0 8%, #f0f0f0 18%, #e0e0e0 33%);
+    background-size: 1000px 100%;
+}
+
+.skeleton-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 300px; 
+    margin: 0 auto; 
+    
+}
+
+.skeleton-coll-pp {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 16px;
+    top: -35px; 
+    box-sizing: border-box;
+    position: relative;
+   
+}
+
+.skeleton-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.skeleton-text {
+    width: 80%;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.skeleton-text.large {
+    width: 60%;
+    height: 24px;
+    margin-bottom: 8px;
+}
+
+.skeleton-text.short {
+    width: 40%;
+}
+
+.skeleton-title22 {
+    margin-bottom: -650px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}

@@ -1,13 +1,34 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import EthImage from "../images/ethereum.svg";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import axios from "axios";
+import SkeletonItemDetails from "./SkeletonItemDetails";
 import AuthorImage from "../images/author_thumbnail.jpg";
 import nftImage from "../images/nftImage.jpg";
 
 const ItemDetails = () => {
+  const { id } = useParams();
+  const [item, setItem] = useState(null);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+
+    const fetchItemDetails = async () => {
+      
+        const response = await axios.get(
+          `https://us-central1-nft-cloud-functions.cloudfunctions.net/itemDetails/${id}`
+        );
+        setItem(response.data);
+        setLoading(false); 
+    };
+
+    fetchItemDetails();
+  }, [id]);
+
+  if (loading) {
+    return <SkeletonItemDetails />;
+  }
 
   return (
     <div id="wrapper">
